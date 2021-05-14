@@ -8,6 +8,7 @@
     --navbar-height:34px;
     --header-height: 120px;
     --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height:46px;
 }
 
 *{
@@ -20,16 +21,6 @@ html{
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-}
-
-.grid{
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.grid__full-width{
-    width: 100%;
 }
 
 .grid__row{
@@ -198,4 +189,43 @@ html{
 
 .select-input__link:hover{
     color:var(--primary-color);
+}
+
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item-link{
+    color:var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item-link:hover{
+    background-color: #ed5c3f;
+}
+
+.pagination-item-link{
+    --height:30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color:#939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+    font-weight: 300;
+}
+
+.pagination-item-icon{
+
 }
